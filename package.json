@@ -1,0 +1,47 @@
+{
+  "name": "blurhash-cli",
+  "version": "1.0.1",
+  "description": "Generate blurhash from CLI",
+  "type": "module",
+  "bin": {
+    "blurhash-cli": "cli.js"
+  },
+  "repository": "https://github.com/mcnaveen/blurhash-cli",
+  "funding": "https://github.com/sponsors/mcnaveen",
+  "author": {
+    "name": "MC.Naveen",
+    "email": "me@mcnaveen.com",
+    "url": "https://mcnaveen.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.16"
+  },
+  "scripts": {
+    "test": "ava"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "keywords": [
+    "blurhash",
+    "blurhash-cli",
+    "blurhash-from-url",
+    "blurhash-cli-generator",
+    "blurhash-generator",
+    "lazyload",
+    "next-image",
+    "react-blurhash"
+  ],
+  "dependencies": {
+    "blurhash-from-url": "^0.0.5",
+    "chalk": "^5.0.1",
+    "meow": "^10.1.3",
+    "ora": "^6.1.2",
+    "update-notifier": "^6.0.2"
+  },
+  "devDependencies": {
+    "ava": "^4.3.3",
+    "execa": "^6.1.0"
+  }
+}
