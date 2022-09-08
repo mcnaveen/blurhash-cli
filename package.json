@@ -1,6 +1,6 @@
 {
   "name": "blurhash-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Generate blurhash from CLI",
   "type": "module",
   "bin": {
