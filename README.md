@@ -37,6 +37,14 @@ In your terminal, run the below command:
 npx blurhash-cli https://i.imgur.com/NhfEdg2.png
 ```
 
+Modify the Size (Size is optional, it defaults to 32):
+
+> The size flag controls the quality of the generated blurhash. A higher size value results in better quality but longer generation time.
+
+```bash
+npx blurhash-cli https://i.imgur.com/NhfEdg2.png --size=64
+```
+
 ### :ballot_box_with_check: Output
 
 ```
