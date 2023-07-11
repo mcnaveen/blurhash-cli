@@ -306,10 +306,10 @@ blueimp-md5@^2.10.0:
   resolved "https://registry.yarnpkg.com/blueimp-md5/-/blueimp-md5-2.19.0.tgz#b53feea5498dcb53dc6ec4b823adb84b729c4af0"
   integrity sha512-DRQrD6gJyy8FbiE4s+bDoXS9hiW3Vbx5uCdwvcCf3zLHL+Iv7LtGHLpr+GZV8rHG8tK766FGYBwRbu8pELTt+w==
 
-blurhash-from-url@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/blurhash-from-url/-/blurhash-from-url-0.0.6.tgz#ecc6c13226c29d5305fbfc38d90f68d506cdc981"
-  integrity sha512-Nlebm1yHkNQGJXPl32wvvLA3FjIy833JEl0zAuZ+EoDoGQco/N0gV3vDIG9Sg+jLHjnHRGjDCWS5nHhz0nFx5A==
+blurhash-from-url@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/blurhash-from-url/-/blurhash-from-url-0.0.7.tgz#0c4db85877ba6bfd851aa9c9b45355834684371c"
+  integrity sha512-StfffrdiHZtAArT4kf0jYOJEKCissJR2ZerpFQf4S1Qj1L8f4czc5w6xRxqoCkCoe4vzRmTgtHToIQrYdlq7vA==
   dependencies:
     blurhash "^1.1.5"
     image-size "^1.0.2"

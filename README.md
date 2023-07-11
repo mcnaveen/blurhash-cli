@@ -54,6 +54,12 @@ npx blurhash-cli https://i.imgur.com/NhfEdg2.png --size=64
 › Height: 600
 ```
 
+### :rocket: Example with Local Image
+
+```bash
+npx blurhash-cli ./image.png --local
+```
+
 ### :six_pointed_star: Credits
 
 - This CLI uses the [blurhash-from-url](https://www.github.com/mcnaveen/blurhash-from-url) library to generate the blurhash for the given URL.

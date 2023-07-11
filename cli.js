@@ -21,21 +21,25 @@ notifier.notify();
 
 const cli = meow(
   `
-     ${cyan} Pass a image url to generate a blurhash, width and height
+     ${cyan} Pass an image URL or local path to generate a blurhash, width, and height
 
      ${red} Usage 
-        $ blurhash-cli <url>
+        $ npx blurhash-cli <url>
 
      ${red} Example
-        $ blurhash-cli https://i.imgur.com/NhfEdg2.png
+        $ npx blurhash-cli https://i.imgur.com/NhfEdg2.png
 
      ${red} Example with size
-        $ blurhash-cli https://i.imgur.com/NhfEdg2.png --size=64
+        $ npx blurhash-cli https://i.imgur.com/NhfEdg2.png --size=64
+
+     ${red} Example with local image
+        $ npx blurhash-cli ./my-image.png --local
 
      ${red} Options
         --size=<size>  Set the size of the blurhash (default: 32)
-        --help, -h  Show help menu for command
-        --version, -v  Show current version of package
+        --local, -l  Use a local image instead of URL
+        --help, -h  Show the help menu for the command
+        --version, -v  Show the current version of the package
       `,
   {
     importMeta: import.meta,
@@ -53,17 +57,20 @@ const cli = meow(
         alias: "s",
         default: "32",
       },
+      local: {
+        type: "boolean",
+        alias: "l",
+        default: false,
+      },
     },
   }
 );
 
 const getCLIUrl = cli.input[0];
-// get size from cli -s or --size flag
-const getSize = parseInt(cli.flags.size);
+let getSize = parseInt(cli.flags.size);
 
-// check if getSize is a valid positive integer
 if (getSize <= 0 || isNaN(getSize)) {
-  console.log(red, "Invalid size specified. Using default size of 32.");
+  console.log(red, "Invalid size specified. Using the default size of 32.");
   getSize = 32;
 }
 
@@ -75,11 +82,14 @@ async function blurhashCLI() {
   spinner.start();
   try {
     spinner.text = "Generating Blurhash...";
+
     const blurhash = await blurhashFromURL(getCLIUrl, {
       size: getSize || 32,
+      offline: cli.flags.local,
     });
+
     spinner.stop();
-    spinner.succeed(`🥳 Blurhash Generated`);
+    spinner.succeed("🥳 Blurhash Generated");
     console.log(cyan, "Hash:", blurhash.encoded);
     console.log(red, "Width:", blurhash.width);
     console.log(green, "Height:", blurhash.height);
