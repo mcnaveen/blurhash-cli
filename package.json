@@ -34,7 +34,7 @@
     "react-blurhash"
   ],
   "dependencies": {
-    "blurhash-from-url": "^0.0.7",
+    "blurhash-from-url": "^0.0.8",
     "chalk": "^5.0.1",
     "meow": "^10.1.3",
     "ora": "^6.1.2",
